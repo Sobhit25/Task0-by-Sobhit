@@ -147,23 +147,23 @@ if (get(handles.popupmenu,'Value') == 1)
 
 elseif (get(handles.popupmenu,'Value') == 2)
     c = str2num(a)* 703 / (str2num(b)^2);
-     if(c>=0 && c<267.8693)
-            stiti = 'Very Severely Underweight';
-      elseif (c>=267.8693 && c<285.7272)
+         if (c>=0 && c<15)
+             stiti = 'Very Severely Underweight';
+         elseif (c>=15 && c<16)
              stiti = 'Severely Underweight';
-      elseif (c>=285.7272 && c<330.3721)
+         elseif (c>=16 && c<18.5)
              stiti = 'Underweight';
-      elseif (c>=330.3721 && c<446.4488)
+         elseif (c>=18.5&& c<25)
              stiti = 'Normal(Healthy Weight)';
-      elseif (c>=446.4488 && c<535.7386)
+         elseif (c>=25 && c<30)
              stiti = 'Overweight';
-      elseif (c>=535.7386 && c<625.0283)
+         elseif (c>=30 && c<35)
              stiti = 'Moderately Obese';
-      elseif (c>=625.0283 && c<714.3181) 
+         elseif (c>=35 && c<40) 
              stiti = 'Severely Obese';
-      elseif (c>=714.3181)
-             stiti = 'Very severely Obese';
-     end  
+         elseif (c>=40)
+             stiti = 'Very Severely Obese';
+        end  
        
     txt = sprintf('%s you are %s.',get(handles.name,'String'),stiti);
     set (handles.result,'String',txt);
